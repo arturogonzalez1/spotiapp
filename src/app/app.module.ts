@@ -7,6 +7,10 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
+// Import routes
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(ROUTES, { useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
