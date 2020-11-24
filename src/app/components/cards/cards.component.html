@@ -1,0 +1,13 @@
+<div class="card-columns">
+  <div class="card shadow border-0 animated fadeIn puntero" *ngFor="let item of items">
+    <img class="card-img-top" (click)="showArtist(item)" [src]="item.images | noimage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">
+        <span class="text-secondary" *ngFor="let artist of item.artists">
+           {{ artist.name }}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
